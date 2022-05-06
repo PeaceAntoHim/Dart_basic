@@ -35,13 +35,11 @@ void sayHeo({required String firstName, String lastName = 'Default'}) {
 }
 
 // Made function return value
-
-// Example 1
+  // Example 1
 String sayHe(String name) {
   return 'Hello $name';
 }
-
-// Example 2
+  // Example 2
 int sum(List<int> numbers) {
   var total = 0;
   for (var value in numbers) {
@@ -50,6 +48,11 @@ int sum(List<int> numbers) {
   return total;
 }
 
+// Made function short expression
+int sum2(int first, int second) => first + second;
+
+
+// This main function to run all code
 void main() {
   sayHello();
   sayHallo('Frans', 'Sebastian');
@@ -74,13 +77,27 @@ void main() {
 
   // This to call function with return value
   print('\n This function retrun value');
-
-  // Example 1
+    // Example 1
   var data = sayHe('Frans');
   print(data);
-
-  // Example 2
+    // Example 2
   print(sum([10, 10, 10, 10, 10]));
   print(sum([5, 5, 5, 5, 5]));
 
+  // This to call function short expression
+  print('\n This is function short expression');
+  print(sum2(100, 100));
+  print(sum2(50, 50));
+
+  // Made inner function
+  void sayMe() {
+    print('Hello Frans');
+
+    void sayMeAgain() {
+      print("Hello again frans");
+    }
+    sayMeAgain();
+  }
+  print('\n This inner function');
+  sayMe();
 }
