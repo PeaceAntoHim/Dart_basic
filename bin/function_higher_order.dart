@@ -13,7 +13,6 @@ String filterBadWord(String name) {
   }
 }
 
-
 void main() {
   sayHello('Frans', filterBadWord);
   sayHello('gila', filterBadWord);
