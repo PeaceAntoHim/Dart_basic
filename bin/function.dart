@@ -34,6 +34,22 @@ void sayHeo({required String firstName, String lastName = 'Default'}) {
   print('Hello $firstName $lastName');
 }
 
+// Made function return value
+
+// Example 1
+String sayHe(String name) {
+  return 'Hello $name';
+}
+
+// Example 2
+int sum(List<int> numbers) {
+  var total = 0;
+  for (var value in numbers) {
+    total += value;
+  }
+  return total;
+}
+
 void main() {
   sayHello();
   sayHallo('Frans', 'Sebastian');
@@ -55,4 +71,16 @@ void main() {
 
   // This named function use required
   sayHeo(lastName: 'Sebastian', firstName: 'Frans' );
+
+  // This to call function with return value
+  print('\n This function retrun value');
+
+  // Example 1
+  var data = sayHe('Frans');
+  print(data);
+
+  // Example 2
+  print(sum([10, 10, 10, 10, 10]));
+  print(sum([5, 5, 5, 5, 5]));
+
 }
